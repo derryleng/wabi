@@ -1,4 +1,5 @@
 import Foundation
+import os
 
 final class DockController {
     private(set) var isHidden: Bool
@@ -22,6 +23,7 @@ final class DockController {
             runDefaults(["write", "com.apple.dock", "autohide-delay", "-float", "999"])
         } else {
             runDefaults(["write", "com.apple.dock", "autohide", "-bool", "false"])
+            runDefaults(["delete", "com.apple.dock", "autohide-delay"])
         }
         killallDock()
     }
@@ -30,15 +32,25 @@ final class DockController {
         let p = Process()
         p.executableURL = URL(fileURLWithPath: "/usr/bin/defaults")
         p.arguments = args
-        try? p.run()
-        p.waitUntilExit()
+        do {
+            try p.run()
+            p.waitUntilExit()
+        } catch {
+            os_log(.error, "DockController: defaults %{public}@ failed: %{public}@",
+                   args.joined(separator: " "), error.localizedDescription)
+        }
     }
 
     private func killallDock() {
         let p = Process()
         p.executableURL = URL(fileURLWithPath: "/usr/bin/killall")
         p.arguments = ["Dock"]
-        try? p.run()
-        p.waitUntilExit()
+        do {
+            try p.run()
+            p.waitUntilExit()
+        } catch {
+            os_log(.error, "DockController: killall Dock failed: %{public}@",
+                   error.localizedDescription)
+        }
     }
 }
