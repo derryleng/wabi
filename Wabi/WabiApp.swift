@@ -11,7 +11,7 @@ struct WabiApp: App {
     }
 }
 
-final class AppDelegate: NSObject, NSApplicationDelegate {
+final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     private var statusItem: NSStatusItem!
     private var spaceSwitcher: SpaceSwitcher!
     private var menuBarController: MenuBarController!
@@ -98,8 +98,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         win.contentView = NSHostingView(rootView: view)
         win.center()
         win.isReleasedWhenClosed = false
+        win.delegate = self
         win.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
         preferencesWindow = win
+    }
+
+    func windowWillClose(_ notification: Notification) {
+        preferencesWindow = nil
     }
 }
