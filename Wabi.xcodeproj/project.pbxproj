@@ -18,6 +18,7 @@
 		7EB5C6D7E8F9A0B1C2D3E4F5 /* DockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA4B5C6D7E8F9A0B1C2D3E4 /* DockController.swift */; };
 		90D7E8F9A0B1C2D3E4F5A6B7 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC6D7E8F9A0B1C2D3E4F5A6 /* HotkeyManager.swift */; };
 		B2F9A0B1C2D3E4F5A6B7C8D9 /* HotkeyRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8F9A0B1C2D3E4F5A6B7C8 /* HotkeyRecorder.swift */; };
+		8B00D509D01D568AA3CA0A29 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5259BEAEA0A2B5EDC6B7E /* PreferencesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6DA4B5C6D7E8F9A0B1C2D3E4 /* DockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockController.swift; sourceTree = "<group>"; };
 		8FC6D7E8F9A0B1C2D3E4F5A6 /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
 		A1E8F9A0B1C2D3E4F5A6B7C8 /* HotkeyRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyRecorder.swift; sourceTree = "<group>"; };
+		9AD5259BEAEA0A2B5EDC6B7E /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				6DA4B5C6D7E8F9A0B1C2D3E4 /* DockController.swift */,
 				8FC6D7E8F9A0B1C2D3E4F5A6 /* HotkeyManager.swift */,
 				A1E8F9A0B1C2D3E4F5A6B7C8 /* HotkeyRecorder.swift */,
+				9AD5259BEAEA0A2B5EDC6B7E /* PreferencesView.swift */,
 				58F02208A1E6A99468703A4E /* Assets.xcassets */,
 				967A6155625E5F7CD9A4CC95 /* Info.plist */,
 				87CAB05044416C1233CD89F1 /* Wabi.entitlements */,
@@ -200,6 +203,7 @@
 				7EB5C6D7E8F9A0B1C2D3E4F5 /* DockController.swift in Sources */,
 				90D7E8F9A0B1C2D3E4F5A6B7 /* HotkeyManager.swift in Sources */,
 				B2F9A0B1C2D3E4F5A6B7C8D9 /* HotkeyRecorder.swift in Sources */,
+				8B00D509D01D568AA3CA0A29 /* PreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
