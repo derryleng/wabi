@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5DFA9A77C9C4F334C477FA90 /* WabiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108235E5FA950233D27A281B /* WabiApp.swift */; };
+		B2C3D4E5F6A7B8C9D0E1F2A3 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* Types.swift */; };
 		C5CACA5955A5E6CFC223889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F02208A1E6A99468703A4E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -15,6 +16,7 @@
 		E90761E6175F2D785242A0BD /* Wabi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wabi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC41BBF1C59168EF2605295A /* WabiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WabiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		108235E5FA950233D27A281B /* WabiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WabiApp.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		58F02208A1E6A99468703A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967A6155625E5F7CD9A4CC95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87CAB05044416C1233CD89F1 /* Wabi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wabi.entitlements; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				108235E5FA950233D27A281B /* WabiApp.swift */,
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* Types.swift */,
 				58F02208A1E6A99468703A4E /* Assets.xcassets */,
 				967A6155625E5F7CD9A4CC95 /* Info.plist */,
 				87CAB05044416C1233CD89F1 /* Wabi.entitlements */,
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DFA9A77C9C4F334C477FA90 /* WabiApp.swift in Sources */,
+				B2C3D4E5F6A7B8C9D0E1F2A3 /* Types.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
