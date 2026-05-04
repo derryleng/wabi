@@ -12,10 +12,15 @@ struct PreferencesView: View {
             Section("General") {
                 Toggle("Launch at login", isOn: $launchAtLogin)
                     .onChange(of: launchAtLogin) { newValue in
-                        if newValue {
-                            try? SMAppService.mainApp.register()
-                        } else {
-                            try? SMAppService.mainApp.unregister()
+                        do {
+                            if newValue {
+                                try SMAppService.mainApp.register()
+                            } else {
+                                try SMAppService.mainApp.unregister()
+                            }
+                        } catch {
+                            // Revert toggle if system call fails (e.g. policy restriction)
+                            launchAtLogin = !newValue
                         }
                     }
             }
