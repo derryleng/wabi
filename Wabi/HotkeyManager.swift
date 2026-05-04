@@ -47,6 +47,15 @@ final class HotkeyManager {
         CGEvent.tapEnable(tap: tap, enable: true)
     }
 
+    deinit {
+        if let tap = eventTap {
+            CGEvent.tapEnable(tap: tap, enable: false)
+        }
+        if let src = runLoopSource {
+            CFRunLoopRemoveSource(CFRunLoopGetCurrent(), src, .commonModes)
+        }
+    }
+
     private func handle(proxy: CGEventTapProxy, type: CGEventType,
                         event: CGEvent) -> Unmanaged<CGEvent>? {
         guard type == .keyDown else { return Unmanaged.passUnretained(event) }
@@ -59,7 +68,9 @@ final class HotkeyManager {
             guard let b = Config.binding(for: target) else { continue }
             guard b.keyCode == keyCode,
                   b.modifiers.intersection(.relevant) == modifiers else { continue }
-            DispatchQueue.main.async { self.dispatch(target: target) }
+            DispatchQueue.main.async { [weak self] in
+                self?.dispatch(target: target)
+            }
             return nil  // swallow the event
         }
         return Unmanaged.passUnretained(event)
