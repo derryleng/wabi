@@ -12,6 +12,9 @@
 		C5CACA5955A5E6CFC223889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F02208A1E6A99468703A4E /* Assets.xcassets */; };
 		D4E5F6A7B8C9D0E1F2A3B4C5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B4 /* Config.swift */; };
 		F6A7B8C9D0E1F2A3B4C5D6E7 /* ConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D0E1F2A3B4C5D6 /* ConfigTests.swift */; };
+		18B9C0D1E2F3A4B5C6D7E8F9 /* CGSPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B9C0D1E2F3A4B5C6D7E8 /* CGSPrivate.swift */; };
+		3AD1E2F3A4B5C6D7E8F9A0B1 /* SpaceSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C0D1E2F3A4B5C6D7E8F9A0 /* SpaceSwitcher.swift */; };
+		5CF3A4B5C6D7E8F9A0B1C2D3 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE2F3A4B5C6D7E8F9A0B1C2 /* MenuBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		58F02208A1E6A99468703A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967A6155625E5F7CD9A4CC95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87CAB05044416C1233CD89F1 /* Wabi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wabi.entitlements; sourceTree = "<group>"; };
+		07A8B9C0D1E2F3A4B5C6D7E8 /* CGSPrivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSPrivate.swift; sourceTree = "<group>"; };
+		29C0D1E2F3A4B5C6D7E8F9A0 /* SpaceSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceSwitcher.swift; sourceTree = "<group>"; };
+		4BE2F3A4B5C6D7E8F9A0B1C2 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				108235E5FA950233D27A281B /* WabiApp.swift */,
 				A1B2C3D4E5F6A7B8C9D0E1F2 /* Types.swift */,
 				C3D4E5F6A7B8C9D0E1F2A3B4 /* Config.swift */,
+				07A8B9C0D1E2F3A4B5C6D7E8 /* CGSPrivate.swift */,
+				29C0D1E2F3A4B5C6D7E8F9A0 /* SpaceSwitcher.swift */,
+				4BE2F3A4B5C6D7E8F9A0B1C2 /* MenuBarController.swift */,
 				58F02208A1E6A99468703A4E /* Assets.xcassets */,
 				967A6155625E5F7CD9A4CC95 /* Info.plist */,
 				87CAB05044416C1233CD89F1 /* Wabi.entitlements */,
@@ -176,6 +185,9 @@
 				5DFA9A77C9C4F334C477FA90 /* WabiApp.swift in Sources */,
 				B2C3D4E5F6A7B8C9D0E1F2A3 /* Types.swift in Sources */,
 				D4E5F6A7B8C9D0E1F2A3B4C5 /* Config.swift in Sources */,
+				18B9C0D1E2F3A4B5C6D7E8F9 /* CGSPrivate.swift in Sources */,
+				3AD1E2F3A4B5C6D7E8F9A0B1 /* SpaceSwitcher.swift in Sources */,
+				5CF3A4B5C6D7E8F9A0B1C2D3 /* MenuBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
