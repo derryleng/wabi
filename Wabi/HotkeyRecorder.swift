@@ -38,13 +38,17 @@ struct HotkeyRecorder: View {
     }
 
     private func startRecording() {
+        if let m = monitor {
+            NSEvent.removeMonitor(m)
+            monitor = nil
+        }
         isRecording = true
         monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
             if event.keyCode == 53 {  // Escape cancels
                 self.stopRecording()
                 return nil
             }
-            if Self.modifierKeyCodes.contains(event.keyCode) { return nil }
+            if Self.modifierKeyCodes.contains(event.keyCode) { return event }
 
             let newBinding = HotkeyBinding(
                 keyCode: event.keyCode,
