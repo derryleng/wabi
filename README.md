@@ -8,11 +8,30 @@ no SIP required, no Karabiner.
 - **Dock toggle** — disable dock hover reveal; show only on demand via hotkey
 - **Built-in hotkey config** — set everything from the menubar icon
 
-## Install
+## Install via Homebrew
 
 ```sh
 brew install --cask derryleng/tap/wabi
 ```
+
+## Build and install locally
+
+```sh
+git clone https://github.com/derryleng/wabi.git
+cd wabi
+xcodebuild \
+  -scheme Wabi \
+  -configuration Release \
+  -derivedDataPath build \
+  CODE_SIGN_IDENTITY="" \
+  CODE_SIGNING_REQUIRED=NO \
+  CODE_SIGNING_ALLOWED=NO \
+  build
+cp -R build/Build/Products/Release/Wabi.app /Applications/
+open /Applications/Wabi.app
+```
+
+## First launch
 
 On first launch, macOS will ask for Accessibility permission. Grant it in:
 
@@ -27,30 +46,19 @@ Click the grid icon in the menu bar → **Preferences…**
 Assign hotkeys to any of the 9 spaces, the menubar toggle, and the dock toggle.
 Click a row to record a key combo. Press Escape to cancel. Click Clear to remove.
 
-## System Changes
-
-When you use the **Dock hide** feature, Wabi writes these defaults:
-
-```sh
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock autohide-delay -float 999
-```
-
-These persist in your system preferences until you toggle the dock back on or uninstall.
-
 ## Uninstall
 
+**Homebrew:**
 ```sh
 brew uninstall --cask derryleng/tap/wabi
 ```
 
-If you used the dock hide feature, revert its defaults:
-
+**Manual:**
 ```sh
-defaults delete com.apple.dock autohide-delay
-defaults delete com.apple.dock autohide
-killall Dock
+rm -rf /Applications/Wabi.app
 ```
+
+Wabi does not modify any system defaults. No cleanup is needed beyond removing the app.
 
 ## Why not yabai?
 
