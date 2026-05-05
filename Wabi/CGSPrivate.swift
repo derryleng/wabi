@@ -10,9 +10,14 @@ typealias CGSSpaceID      = UInt64
 // CGSCopyManagedDisplaySpaces is exported in the SDK stub and can use @_silgen_name.
 // CGSMainConnection and CGSSetActiveSpace are not in the SDK stub, so we resolve
 // them via dlsym against the live CoreGraphics dylib.
+//
+// CGEventSetLocation is a public CoreGraphics C function but has no Swift setter — expose it here.
 
 @_silgen_name("CGSCopyManagedDisplaySpaces")
 func CGSCopyManagedDisplaySpaces(_ cid: CGSConnectionID) -> CFArray
+
+@_silgen_name("CGEventSetLocation")
+func CGEventSetLocation(_ event: CGEvent, _ location: CGPoint)
 
 private let _cgHandle: UnsafeMutableRawPointer? = dlopen(
     "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics", RTLD_LAZY

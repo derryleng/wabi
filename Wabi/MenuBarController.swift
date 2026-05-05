@@ -2,8 +2,10 @@ import AppKit
 
 final class MenuBarController {
     private(set) var isHidden: Bool
+    private let hoverBlocker: HoverBlocker
 
-    init() {
+    init(hoverBlocker: HoverBlocker) {
+        self.hoverBlocker = hoverBlocker
         isHidden = Config.menuBarHidden()
         apply()
     }
@@ -16,5 +18,6 @@ final class MenuBarController {
 
     private func apply() {
         NSMenu.setMenuBarVisible(!isHidden)
+        hoverBlocker.menuBarBlocked = isHidden
     }
 }

@@ -13,6 +13,7 @@ struct WabiApp: App {
 
 final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     private var statusItem: NSStatusItem!
+    private var hoverBlocker: HoverBlocker!
     private var spaceSwitcher: SpaceSwitcher!
     private var menuBarController: MenuBarController!
     private var dockController: DockController!
@@ -21,10 +22,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         checkAccessibility()
-        spaceSwitcher    = SpaceSwitcher()
-        menuBarController = MenuBarController()   // restores menubar hidden state
-        dockController   = DockController()       // reads dock hidden state (no killall)
-        hotkeyManager    = HotkeyManager(
+        hoverBlocker      = HoverBlocker()
+        spaceSwitcher     = SpaceSwitcher()
+        menuBarController = MenuBarController(hoverBlocker: hoverBlocker)
+        dockController    = DockController(hoverBlocker: hoverBlocker)
+        hotkeyManager     = HotkeyManager(
             spaceSwitcher: spaceSwitcher,
             menuBarController: menuBarController,
             dockController: dockController
